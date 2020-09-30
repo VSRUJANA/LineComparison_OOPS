@@ -12,10 +12,10 @@ namespace Line_Comparison_OOPS
             Console.Write("The coordinates of end points of Line 2 are ");
             double lengthOfLine2 = LengthOfLine();
             Console.WriteLine("Length of line 2: " + lengthOfLine2);
-            double res = lengthOfLine1.CompareTo(lengthOfLine2);
-            if (res > 0)
+            double result = lengthOfLine1.CompareTo(lengthOfLine2);
+            if (result > 0)
                 Console.WriteLine("line 1 is greater than line 2");
-            else if (res < 0)
+            else if (result < 0)
                 Console.WriteLine("line 1 is smaller than line 2");
             else
                 Console.WriteLine("Both the lines are equal");
