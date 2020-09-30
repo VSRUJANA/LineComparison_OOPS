@@ -5,23 +5,27 @@ namespace Line_Comparison_OOPS
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Welcome to Line Comparison Computation Program!");
+            Console.WriteLine("Welcome to Line Comparison Computation Program");
             Console.Write("The coordinates of end points of Line 1 are ");
             double lengthOfLine1 = LengthOfLine();
             Console.WriteLine("Length of line 1: " + lengthOfLine1);
             Console.Write("The coordinates of end points of Line 2 are ");
             double lengthOfLine2 = LengthOfLine();
             Console.WriteLine("Length of line 2: " + lengthOfLine2);
-            if (lengthOfLine1 == lengthOfLine2)
-                Console.WriteLine("Both the lines are equal");
+            double res = lengthOfLine1.CompareTo(lengthOfLine2);
+            if (res > 0)
+                Console.WriteLine("line 1 is greater than line 2");
+            else if (res < 0)
+                Console.WriteLine("line 1 is smaller than line 2");
             else
-                Console.WriteLine("Both the lines are unequal");
+                Console.WriteLine("Both the lines are equal");
         }
         static double LengthOfLine()
         {
             double[] x = new double[2];
             double[] y = new double[2];
             Random random = new Random();
+
             for (int index = 0; index < 2; index++)
             {
                 x[index] = random.Next(-100, 100);
